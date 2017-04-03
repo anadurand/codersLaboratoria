@@ -8,18 +8,22 @@
     <title>Coders de Laboratoria</title>
   </head>
   <body>
-    <img src="assets/img/logo.png" alt="">
-    <h1>Coder de Laboratoria</h1>
-    <h3>Se muestran las coder de diferentes promociones según el filtro especificado</h3>
-    <select id = "select" class="" >
-      <option value="all" hidden>Selecciona una opción</option>
-      <option value="4-chile">4ta Promoción Chile</option>
-      <option value="5-lima">5ta Promoción Lima</option>
-      <option value="6-lima">6ta Promoción Lima</option>
-
-    </select>
-    <div id = "promo" class="promocion"></div>
-    <script src="assets/js/app.js" charset="utf-8"></script>
-    <script src="assets/js/main.js" charset="utf-8"></script>
+      <div class="logo">
+        <img src="assets/img/logo.png" alt="Laboratoria" id = "logo">
+      </div>
+      <h1>Coder de Laboratoria</h1>
+      <h3>Se muestran las coder de diferentes promociones según el filtro especificado</h3>
+      <div class="select">
+        <select id = "select" class="" autofocus>
+          <option value="all" hidden>Selecciona una opción</option>
+          <option value="4-chile">4ta Promoción Chile</option>
+          <option value="5-lima">5ta Promoción Lima</option>
+          <option value="6-lima">6ta Promoción Lima</option>
+        </select>
+      </div>
+      <br><br>
+      <div id = "promo" class="promocion"></div>
+      <script src="assets/js/app.js" charset="utf-8"></script>
+      <script src="assets/js/main.js" charset="utf-8"></script>
   </body>
 </html>

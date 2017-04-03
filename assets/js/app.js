@@ -1,26 +1,6 @@
 function PostImag(){
 
-  this.fotos = [];
-  this.count = 0;
-
-  this.addFoto = function(nombre, ruta){
-    this.fotos.push({
-      id: this.count,
-      name: nombre,
-      url: ruta
-
-    });
-    this.count++;
-  }
-
-  this.fotoToHTML = function(parent){
-    parent.innerHTML = "";
-    this.fotos.forEach(function(foto){
-      parent.appendChild(this.createHTMLFoto(foto.id,foto.name, foto.url));
-    },this);
-  }
-
-  this.createHTMLFoto = function(id,nombre,ruta){
+  this.createHTMLFoto = function(nombre,ruta){
     var div = document.createElement("div");
     div.classList.add("images");
     var img = new Image();
@@ -28,7 +8,7 @@ function PostImag(){
     var divSpan = document.createElement("div");
     var span = document.createElement("span");
     span.innerHTML = nombre;
-    span.classList.add("spanFoto");
+    divSpan.classList.add("spanFoto");
 
     div.appendChild(img);
     div.appendChild(divSpan);
@@ -38,6 +18,23 @@ function PostImag(){
 
   }
 
+}
 
+function mostrar(array,valor){
+  var postFotos = new PostImag();
+  var docF = document.createDocumentFragment();
 
+  array.forEach(function(item){
+    var folder = valor.split("-")[1];
+    var ruta = "assets/img/" + folder + "/" + valor + "/" + item + ".jpg";
+    item = item.split("-");
+    var nombre = "";
+    item.forEach(function(i){
+      i = i.toUpperCase();
+      nombre += i + " ";
+    });
+
+    docF.appendChild(postFotos.createHTMLFoto(nombre,ruta));
+  });
+  return docF;
 }

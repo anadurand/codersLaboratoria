@@ -1,3 +1,26 @@
+body{
+  text-align: center;
+}
+h1,h3{
+  text-align: center;
+}
+.select{
+  width: 15%;
+  margin: 0 auto;
+  
+}
+.logo{
+  width: 30%;
+  margin: 0 auto;
+}
+
 .images{
+  margin: 1%;
+  padding: 20px 20px;
+  background-color: white;
+  box-shadow: 10px 10px 5px #888888;
   display: inline-block;
+}
+.spanFoto{
+  padding: 2%;
 }
